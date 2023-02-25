@@ -1,0 +1,719 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+a,
+p {
+  color: #fff;
+}
+a {
+  cursor: pointer;
+}
+/* 开场动画 */
+.opening-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 998;
+  animation: hiddenOn 2s forwards;
+}
+.rhombus-img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url(../img/under_bg.jpg);
+  animation: opacity 2s forwards;
+  animation-delay: 2s;
+}
+/* 头部导航 */
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.header .header-nav-right {
+  position: absolute;
+  display: flex;
+  width: 820px;
+  height: 40px;
+  right: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header-nav-right > a {
+  position: relative;
+  font-size: 100%;
+  color: #FEFEFE;
+  font-weight: lighter;
+  font-family: 'Abel';
+}
+.header .header-nav-right > a::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  bottom: -7px;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.header .header-nav-right > a:hover::after {
+  transform: scale(1);
+}
+.header .header-nav-right > a:nth-of-type(1) {
+  animation: topmove 1s backwards;
+  animation-delay: 0.4s;
+}
+.header .header-nav-right > a:nth-of-type(2) {
+  animation: topmove 1s backwards;
+  animation-delay: 0.6s;
+}
+.header .header-nav-right > a:nth-of-type(3) {
+  animation: topmove 1s backwards;
+  animation-delay: 0.8s;
+}
+.header .header-nav-right > a:nth-of-type(4) {
+  animation: topmove 1s backwards;
+  animation-delay: 1s;
+}
+.header .header-nav-right > a:nth-of-type(5) {
+  animation: topmove 1s backwards;
+  animation-delay: 1.2s;
+}
+.header .header-nav-right > a:nth-of-type(6) {
+  animation: topmove 1s backwards;
+  animation-delay: 1.4s;
+}
+.header .header-nav-right > a:nth-of-type(7) {
+  animation: topmove 1s backwards;
+  animation-delay: 1.6s;
+}
+.header .header-nav-right > a:nth-of-type(8) {
+  animation: topmove 1s backwards;
+  animation-delay: 1.8s;
+}
+.header .header-nav-right > a:nth-of-type(9) {
+  animation: topmove 1s backwards;
+  animation-delay: 2s;
+}
+.header .header-nav-right > a:nth-of-type(10) {
+  animation: topmove 1s backwards;
+  animation-delay: 2.2s;
+}
+.header .header-nav-right > a:nth-of-type(11) {
+  animation: topmove 1s backwards;
+  animation-delay: 2.4s;
+}
+.header .header-nav-right > a:nth-of-type(12) {
+  animation: topmove 1s backwards;
+  animation-delay: 2.6s;
+}
+/* 主体 */
+.main {
+  position: relative;
+  opacity: 0;
+  animation: opacity 3s forwards;
+  /* 尾部 */
+}
+.main .bg-img {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: url(../img/bg10.jpg);
+  background-position: 0 -10px;
+}
+.main .bg-img .bg-bias {
+  width: 100%;
+  height: 100%;
+  background: url(../img/dot.png);
+}
+.main .bg-img .bg-bias .new {
+  position: absolute;
+  width: 870px;
+  height: 136px;
+  background-color: black;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  bottom: -68px;
+  color: white;
+  line-height: 136px;
+}
+.main .bg-img .bg-bias .new span {
+  padding-left: 350px;
+  font-size: 80px;
+  font-family: 'abel';
+}
+.main .introduce {
+  width: 100%;
+  height: 1678px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+.main .introduce .top {
+  width: 1200px;
+  height: 905px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.main .introduce .top .head {
+  width: 100%;
+  height: 48px;
+  text-align: center;
+}
+.main .introduce .top .head .sta {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 2.5em;
+  align-items: center;
+  font-family: 'abel';
+}
+.main .introduce .top .head .sta::after {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: black;
+}
+.main .introduce .top .head .sta::before {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: black;
+}
+.main .introduce .top .head .center {
+  display: flex;
+  margin-top: 30px;
+}
+.main .introduce .top .head .center :first-child {
+  width: 600px;
+}
+.main .introduce .top .head .center :first-child dl {
+  box-sizing: border-box;
+}
+.main .introduce .top .head .center :first-child dl dt {
+  color: #A978BC;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+.main .introduce .top .head .center :first-child dl dt::after {
+  display: block;
+  content: '';
+  width: 2em;
+  height: 1px;
+  background-color: #A978BC;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+}
+.main .introduce .top .head .center :first-child dl dd {
+  font-size: 1.6em;
+  font-weight: 100;
+  padding-bottom: 40px;
+}
+.main .introduce .top .head .center :first-child dl dd span {
+  display: block;
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+.main .introduce .top .head .center :last-child {
+  width: 600px;
+}
+.main .introduce .top .head .center :last-child dl {
+  box-sizing: border-box;
+}
+.main .introduce .top .head .center :last-child dl dt {
+  color: #A978BC;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+.main .introduce .top .head .center :last-child dl dt::after {
+  display: block;
+  content: '';
+  width: 6em;
+  height: 1px;
+  background-color: #A978BC;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+}
+.main .introduce .top .head .center :last-child dl dd {
+  font-size: 1.6em;
+  font-weight: 100;
+  padding-bottom: 40px;
+}
+.main .introduce .top .head .center :last-child dl dd span {
+  display: block;
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+.main .introduce .top .importance {
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .introduce .top .importance div {
+  width: 400px;
+  height: 110px;
+}
+.main .introduce .top .importance div dl {
+  box-sizing: border-box;
+}
+.main .introduce .top .importance div dl dt {
+  color: #A978BC;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+.main .introduce .top .importance div dl dt::after {
+  display: block;
+  content: '';
+  width: 2em;
+  height: 1px;
+  background-color: #A978BC;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+}
+.main .introduce .top .importance div dl dd {
+  font-size: 1.6em;
+  font-weight: 100;
+  padding-bottom: 40px;
+}
+.main .introduce .top .importance div dl dd a {
+  color: black;
+  transition: 0.3s;
+}
+.main .introduce .top .importance div dl dd a:hover {
+  color: #AB8AB9;
+}
+.main .introduce .top .importance :nth-child(2) dt::after {
+  width: 5.6em;
+}
+.main .introduce .top .importance :nth-child(3) dt::after {
+  width: 10.5em;
+}
+.main .introduce .top .importance :nth-child(4) dt::after {
+  width: 11em;
+}
+.main .introduce .top .importance :nth-child(5) dt::after {
+  width: 8.5em;
+}
+.main .introduce .top .importance :nth-child(6) dt::after {
+  width: 4em;
+}
+.main .introduce .top .importance :nth-child(7) dt::after {
+  width: 4em;
+}
+.main .introduce .top .importance :nth-child(8) dt::after {
+  width: 4em;
+}
+.main .introduce .top .importance :nth-child(9) dt::after {
+  width: 7.5em;
+}
+.main .introduce .top .importance :nth-child(10) dt::after {
+  width: 8.5em;
+}
+.main .introduce .top .importance :nth-child(11) dt::after {
+  width: 2em;
+}
+.main .introduce .top .importance :nth-child(12) dt::after {
+  width: 4em;
+}
+.main .introduce .top .importance :nth-child(13) dt::after {
+  width: 2em;
+}
+.main .introduce .top .importance :nth-child(14) dt::after {
+  width: 4em;
+}
+.main .introduce .top .importance :nth-child(15) dt::after {
+  width: 8.5em;
+}
+.main .introduce .bottom {
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+}
+.main .introduce .bottom .head {
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.main .introduce .bottom .head .sta {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 2.5em;
+  align-items: center;
+  font-family: 'abel';
+}
+.main .introduce .bottom .head .sta::after {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: black;
+}
+.main .introduce .bottom .head .sta::before {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: black;
+}
+.main .introduce .bottom .importance {
+  height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .introduce .bottom .importance div {
+  width: 400px;
+  height: 110px;
+}
+.main .introduce .bottom .importance div dl {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .introduce .bottom .importance div dl dt {
+  color: #A978BC;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+.main .introduce .bottom .importance div dl dt::after {
+  display: block;
+  content: '';
+  width: 4em;
+  height: 1px;
+  background-color: #A978BC;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+}
+.main .introduce .bottom .importance div dl dd {
+  font-size: 1.6em;
+  font-weight: 100;
+  padding-bottom: 40px;
+}
+.main .introduce .bottom .importance div dl dd a {
+  color: black;
+  transition: 0.3s;
+}
+.main .introduce .bottom .importance div dl dd a:hover {
+  color: #AB8AB9;
+}
+.main .introduce .bottom .importance :nth-child(2) dt::after {
+  width: 4.5em;
+}
+.main .introduce .bottom .importance :nth-child(3) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(4) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(5) dt::after {
+  width: 3em;
+}
+.main .introduce .bottom .importance :nth-child(6) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(7) dt::after {
+  width: 4.5em;
+}
+.main .introduce .bottom .importance :nth-child(8) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(9) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(10) dt::after {
+  width: 2em;
+}
+.main .introduce .bottom .importance :nth-child(11) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(12) dt::after {
+  width: 4em;
+}
+.main .footer {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.main .footer .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 132px;
+  margin-top: 50px;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+.main .footer .center {
+  width: 100%;
+  height: 72px;
+  padding: 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -20px;
+}
+.show-person {
+  position: relative;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(6, 6, 6, 0);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.show-person .per1,
+.show-person .per2 {
+  position: absolute;
+  width: 800px;
+  height: 205px;
+  background-color: #fff;
+  display: none;
+  padding: 30px;
+  box-sizing: border-box;
+  font-weight: lighter;
+  line-height: 20px;
+}
+.show-person .per1 p,
+.show-person .per2 p {
+  font-size: 1.4em;
+  color: #000;
+  font-weight: 400;
+  font-family: '黑体';
+}
+.show-person span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(243, 237, 237, 0);
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.show-person span::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: white;
+  transform: rotate(40deg);
+  border-radius: 15px;
+}
+.show-person span::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: white;
+  transform: rotate(-40deg);
+  border-radius: 15px;
+}
+.show-person span:hover {
+  opacity: 1;
+  background: #f3eded;
+}
+.show-person span:hover::after,
+.show-person span:hover::before {
+  background-color: red;
+}
+.show-bot-person {
+  position: relative;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(6, 6, 6, 0);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.show-bot-person .per1,
+.show-bot-person .per2,
+.show-bot-person .per3,
+.show-bot-person .per4,
+.show-bot-person .per5,
+.show-bot-person .per6,
+.show-bot-person .per7,
+.show-bot-person .per8,
+.show-bot-person .per9,
+.show-bot-person .per10,
+.show-bot-person .per11,
+.show-bot-person .per12 {
+  position: absolute;
+  width: 800px;
+  height: 353px;
+  background-color: #fff;
+  display: none;
+}
+.show-bot-person .per1 .modal-img,
+.show-bot-person .per2 .modal-img,
+.show-bot-person .per3 .modal-img,
+.show-bot-person .per4 .modal-img,
+.show-bot-person .per5 .modal-img,
+.show-bot-person .per6 .modal-img,
+.show-bot-person .per7 .modal-img,
+.show-bot-person .per8 .modal-img,
+.show-bot-person .per9 .modal-img,
+.show-bot-person .per10 .modal-img,
+.show-bot-person .per11 .modal-img,
+.show-bot-person .per12 .modal-img {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+}
+.show-bot-person .per1 .modal-img img,
+.show-bot-person .per2 .modal-img img,
+.show-bot-person .per3 .modal-img img,
+.show-bot-person .per4 .modal-img img,
+.show-bot-person .per5 .modal-img img,
+.show-bot-person .per6 .modal-img img,
+.show-bot-person .per7 .modal-img img,
+.show-bot-person .per8 .modal-img img,
+.show-bot-person .per9 .modal-img img,
+.show-bot-person .per10 .modal-img img,
+.show-bot-person .per11 .modal-img img,
+.show-bot-person .per12 .modal-img img {
+  width: 208px;
+  height: 303px;
+}
+.show-bot-person .per1 .syn,
+.show-bot-person .per2 .syn,
+.show-bot-person .per3 .syn,
+.show-bot-person .per4 .syn,
+.show-bot-person .per5 .syn,
+.show-bot-person .per6 .syn,
+.show-bot-person .per7 .syn,
+.show-bot-person .per8 .syn,
+.show-bot-person .per9 .syn,
+.show-bot-person .per10 .syn,
+.show-bot-person .per11 .syn,
+.show-bot-person .per12 .syn {
+  position: absolute;
+  left: 30%;
+  width: 70%;
+  height: 100%;
+  padding: 2rem 2rem 2rem 1rem;
+  box-sizing: border-box;
+  line-height: 24px;
+  font-weight: lighter;
+}
+.show-bot-person .per1 .syn .modal-ttl,
+.show-bot-person .per2 .syn .modal-ttl,
+.show-bot-person .per3 .syn .modal-ttl,
+.show-bot-person .per4 .syn .modal-ttl,
+.show-bot-person .per5 .syn .modal-ttl,
+.show-bot-person .per6 .syn .modal-ttl,
+.show-bot-person .per7 .syn .modal-ttl,
+.show-bot-person .per8 .syn .modal-ttl,
+.show-bot-person .per9 .syn .modal-ttl,
+.show-bot-person .per10 .syn .modal-ttl,
+.show-bot-person .per11 .syn .modal-ttl,
+.show-bot-person .per12 .syn .modal-ttl {
+  color: #000;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+.show-bot-person .per7 {
+  height: 258px;
+}
+.show-bot-person .per7 .modal-img img {
+  width: 208px;
+  height: 226px;
+}
+.show-bot-person span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(243, 237, 237, 0);
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.show-bot-person span::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: white;
+  transform: rotate(40deg);
+  border-radius: 15px;
+}
+.show-bot-person span::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: white;
+  transform: rotate(-40deg);
+  border-radius: 15px;
+}
+.show-bot-person span:hover {
+  opacity: 1;
+  background: #f3eded;
+}
+.show-bot-person span:hover::after,
+.show-bot-person span:hover::before {
+  background-color: red;
+}
+@keyframes topmove {
+  0% {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,256 @@
+//清除默认样式
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+a,p{color: #fff;}
+a{cursor: pointer;}
+/* 开场动画 */
+.opening-animation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 998;
+    animation: hiddenOn 2s forwards;
+}
+//右侧导航渐入动画类
+.better(@delay){
+    animation: topmove 1s backwards;
+    animation-delay:@delay;
+}
+//背景图片
+.rhombus-img{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: url(../img/under_bg.jpg);
+    animation: opacity 2s forwards;
+    animation-delay: 2s;
+}
+/* 头部导航 */
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 100;
+    .header-nav-right{
+        position: absolute;
+        display: flex;
+        width: 820px;
+        height: 40px;
+        right: 20px;
+        justify-content: space-around;
+        align-items: center;
+        >a{
+            position: relative;
+            font-size: 100%;
+            color: #FEFEFE;
+            font-weight:lighter;
+            font-family: 'Abel';
+            &::after{
+                position: absolute;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: #fff;
+                bottom:-7px;
+                transform: scale(0);
+                transition: 0.3s;
+            } 
+            &:hover::after{
+                transform: scale(1);
+            }
+            &:nth-of-type(1) {
+                .better(0.4s)
+            }
+
+            &:nth-of-type(2) {
+                .better(0.6s)
+            }
+
+            &:nth-of-type(3) {
+                .better(0.8s)
+            }
+
+            &:nth-of-type(4) {
+                .better(1s)
+            }
+
+            &:nth-of-type(5) {
+                .better(1.2s)
+            }
+
+            &:nth-of-type(6) {
+                .better(1.4s)
+            }
+
+            &:nth-of-type(7) {
+                .better(1.6s)
+            }
+
+            &:nth-of-type(8) {
+                .better(1.8s)
+            }
+
+            &:nth-of-type(9) {
+                .better(2s)
+            }
+
+            &:nth-of-type(10) {
+                .better(2.2s)
+            }
+
+            &:nth-of-type(11) {
+                .better(2.4s)
+            }
+
+            &:nth-of-type(12) {
+                .better(2.6s)
+            }
+        }
+    }
+}
+/* 主体 */
+.main{
+    position: relative;
+    opacity: 0;
+    animation: opacity 3s forwards;
+    .bg-img{
+        position: relative;
+        width: 100%;
+        height: 480px;
+        background: url(../img/int_bg.jpg);
+        background-position: 0 -10px;
+        .bg-bias{
+            width: 100%;
+            height: 100%;
+            background:url(../img/dot.png);
+            .new{
+                position: absolute;
+                width: 680px;
+                height: 136px;
+                background-color: black;
+                clip-path: polygon(0 0,100% 0,85% 100%,0 100%);
+                bottom: -68px;
+                color:white;
+                line-height: 136px;
+                span{
+                    padding-left: 350px;
+                    font-size: 80px;
+                    font-family: 'abel';
+                }
+            }
+        }
+    }
+    .center-nav{
+        padding: 150px 0;
+        h2{
+            font-family: 'Abel', sans-serif;
+            text-shadow: 0 0 1px black;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: lighter;
+            padding-bottom:48px;
+        }
+        .nav{
+            display: flex;
+            height: 1200px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            a{  
+                position: relative;
+                width: 1200px;
+                height: 95px;
+                background-color: black;
+                padding: 20px 50px;
+                box-sizing: border-box;
+                opacity: 0;
+                animation: topmove 0.8s forwards;
+                dl{
+                    position: absolute;
+                    width: 91%;
+                    height: 55px;
+                    top: 50%;
+                    margin-top: -22.5px;
+                    dt{
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                    }
+                }
+                ::after{
+                    width: 20px;
+                    height: 20px;
+                    content: "";
+                    position: absolute;
+                    top: 25%;
+                    right: 0px;
+                    border-top: 1px solid #E0E0E0;
+                    border-right: 1px solid #E0E0E0;
+                    transform: rotate(45deg);
+                    z-index: 3;
+                }
+            }
+        }
+    }
+    /* 尾部 */
+    .footer{
+        position: relative;
+        width: 100%;
+        height: 370px;
+        background-color: black;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .top{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 132px;
+            margin-top: 50px;
+            padding: 0 10%;
+            box-sizing: border-box;
+        }
+        .center{
+            width: 100%;
+            height: 72px;  
+            padding: 0 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: -20px;
+        }
+    }
+}
+//公共上移淡入动画
+@keyframes topmove {
+    0%{
+         transform: translateY(35px);
+         opacity: 0;
+    }
+    100%{
+         transform: translateY(0px);
+         opacity: 1;
+    }
+}
+//公共渐入动画
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

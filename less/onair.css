@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  color: #fff;
+}
+a {
+  cursor: pointer;
+}
+/* 开场动画 */
+.opening-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 998;
+  animation: hiddenOn 2s forwards;
+}
+.rhombus-img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url(../img/under_bg.jpg);
+  animation: opacity 2s forwards;
+  animation-delay: 2s;
+}
+/* 头部导航 */
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.header .header-nav-right {
+  position: absolute;
+  display: flex;
+  width: 820px;
+  height: 40px;
+  right: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header-nav-right > a {
+  position: relative;
+  font-size: 100%;
+  color: #FEFEFE;
+  font-weight: lighter;
+  font-family: 'Abel';
+}
+.header .header-nav-right > a::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  bottom: -7px;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.header .header-nav-right > a:hover::after {
+  transform: scale(1);
+}
+.header .header-nav-right > a:nth-of-type(1) {
+  animation: topmove 1s backwards;
+  animation-delay: 0.4s;
+}
+.header .header-nav-right > a:nth-of-type(2) {
+  animation: topmove 1s backwards;
+  animation-delay: 0.6s;
+}
+.header .header-nav-right > a:nth-of-type(3) {
+  animation: topmove 1s backwards;
+  animation-delay: 0.8s;
+}
+.header .header-nav-right > a:nth-of-type(4) {
+  animation: topmove 1s backwards;
+  animation-delay: 1s;
+}
+.header .header-nav-right > a:nth-of-type(5) {
+  animation: topmove 1s backwards;
+  animation-delay: 1.2s;
+}
+.header .header-nav-right > a:nth-of-type(6) {
+  animation: topmove 1s backwards;
+  animation-delay: 1.4s;
+}
+.header .header-nav-right > a:nth-of-type(7) {
+  animation: topmove 1s backwards;
+  animation-delay: 1.6s;
+}
+.header .header-nav-right > a:nth-of-type(8) {
+  animation: topmove 1s backwards;
+  animation-delay: 1.8s;
+}
+.header .header-nav-right > a:nth-of-type(9) {
+  animation: topmove 1s backwards;
+  animation-delay: 2s;
+}
+.header .header-nav-right > a:nth-of-type(10) {
+  animation: topmove 1s backwards;
+  animation-delay: 2.2s;
+}
+.header .header-nav-right > a:nth-of-type(11) {
+  animation: topmove 1s backwards;
+  animation-delay: 2.4s;
+}
+.header .header-nav-right > a:nth-of-type(12) {
+  animation: topmove 1s backwards;
+  animation-delay: 2.6s;
+}
+/* 主体 */
+.main {
+  position: relative;
+  opacity: 0;
+  animation: opacity 3s forwards;
+  /* 尾部 */
+}
+.main .bg-img {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: url(../img/bg10.jpg);
+  background-position: 0 -10px;
+}
+.main .bg-img .bg-bias {
+  width: 100%;
+  height: 100%;
+  background: url(../img/dot.png);
+}
+.main .bg-img .bg-bias .new {
+  position: absolute;
+  width: 650px;
+  height: 136px;
+  background-color: black;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  bottom: -68px;
+  color: white;
+  line-height: 136px;
+}
+.main .bg-img .bg-bias .new span {
+  padding-left: 350px;
+  font-size: 80px;
+  font-family: 'abel';
+}
+.main .introduce {
+  width: 100%;
+  height: 4000px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+.main .introduce .top {
+  width: 1200px;
+  height: 905px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.main .introduce .top .head {
+  width: 100%;
+  height: 48px;
+  text-align: center;
+}
+.main .introduce .top .head .sta {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 2.5em;
+  align-items: center;
+  font-family: 'abel';
+}
+.main .introduce .top .head .sta::after {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: black;
+}
+.main .introduce .top .head .sta::before {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: black;
+}
+.main .introduce .top .text {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 100px 0;
+}
+.main .introduce .top .text h3 {
+  font-weight: 500;
+  font-size: 2.5em;
+  font-family: 'abel';
+}
+.main .introduce .top .text p {
+  text-align: center;
+}
+.main .introduce .top .text p :first-child {
+  font-size: 2.2em;
+  background: linear-gradient(transparent 60%, #e1beee 60%, #e1beee 80%);
+}
+.main .introduce .top .text p :last-child {
+  display: block;
+  margin-top: 10px;
+  font-family: serif;
+  font-size: 1.5em;
+}
+.main .introduce .bottom {
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+}
+.main .introduce .bottom .head {
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.main .introduce .bottom .head .sta {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 2.5em;
+  align-items: center;
+  font-family: 'abel';
+}
+.main .introduce .bottom .head .sta::after {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: black;
+}
+.main .introduce .bottom .head .sta::before {
+  display: inline-block;
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: black;
+}
+.main .introduce .bottom .importance {
+  height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .introduce .bottom .importance div {
+  width: 400px;
+  height: 110px;
+}
+.main .introduce .bottom .importance div dl {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .introduce .bottom .importance div dl dt {
+  color: #A978BC;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+.main .introduce .bottom .importance div dl dt::after {
+  display: block;
+  content: '';
+  width: 4em;
+  height: 1px;
+  background-color: #A978BC;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+}
+.main .introduce .bottom .importance div dl dd {
+  font-size: 1.6em;
+  font-weight: 100;
+  padding-bottom: 40px;
+}
+.main .introduce .bottom .importance div dl dd a {
+  color: black;
+  transition: 0.3s;
+}
+.main .introduce .bottom .importance div dl dd a:hover {
+  color: #AB8AB9;
+}
+.main .introduce .bottom .importance :nth-child(2) dt::after {
+  width: 4.5em;
+}
+.main .introduce .bottom .importance :nth-child(3) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(4) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(5) dt::after {
+  width: 3em;
+}
+.main .introduce .bottom .importance :nth-child(6) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(7) dt::after {
+  width: 4.5em;
+}
+.main .introduce .bottom .importance :nth-child(8) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(9) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(10) dt::after {
+  width: 2em;
+}
+.main .introduce .bottom .importance :nth-child(11) dt::after {
+  width: 4em;
+}
+.main .introduce .bottom .importance :nth-child(12) dt::after {
+  width: 4em;
+}
+.main .footer {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.main .footer .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 132px;
+  margin-top: 50px;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+.main .footer .center {
+  width: 100%;
+  height: 72px;
+  padding: 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -20px;
+}
+@keyframes topmove {
+  0% {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
